@@ -1,0 +1,58 @@
+{
+  "poll_minutes": 10,
+  "rss_feeds": [
+    "https://airdrops.io/feed/",
+    "https://www.reddit.com/r/airdrops/new/.rss",
+    "https://cryptoslate.com/feed/",
+    "https://blog.layer3.xyz/feed.xml",
+    "https://mirror.xyz/feed",
+    "https://medium.com/feed/tag/airdrop",
+    "https://medium.com/feed/tag/testnet",
+    "https://medium.com/feed/tag/crypto-airdrop",
+    "https://www.reddit.com/r/cryptodevs/new/.rss",
+    "https://www.reddit.com/r/defi/new/.rss",
+    "https://www.reddit.com/r/ethereum/new/.rss",
+    "https://www.reddit.com/r/solana/new/.rss",
+    "https://www.reddit.com/r/skalenetwork/new/.rss",
+    "https://www.reddit.com/r/cosmosnetwork/new/.rss",
+    "https://forum.cosmos.network/latest.rss",
+    "https://solana.com/news/rss.xml",
+    "https://blog.chain.link/feed/",
+    "https://blog.skalelabs.com/rss/",
+    "https://polygon.technology/blog/rss.xml",
+    "https://near.org/blog/feed/",
+    "https://hackerone.com/blog.rss",
+    "https://bounties.gitcoin.co/feed",
+    "https://medium.com/feed/tag/gitcoin",
+    "https://nitter.net/solana/rss",
+    "https://nitter.net/SkaleNetwork/rss",
+    "https://nitter.net/LayerZero_Labs/rss",
+    "https://nitter.net/arbitrum/rss",
+    "https://nitter.net/optimismFND/rss",
+    "https://nitter.net/Base/rss",
+    "https://nitter.net/Starknet/rss",
+    "https://nitter.net/zkSync/rss",
+    "https://nitter.net/SeiNetwork/rss",
+    "https://nitter.net/CelestiaOrg/rss",
+    "https://nitter.net/Layer3xyz/rss",
+    "https://nitter.net/GalxeHQ/rss"
+  ],
+  "github_search": {
+    "enabled": true,
+    "query": "label:bounty+blockchain+state:open",
+    "per_page": 20
+  },
+  "notify": {
+    "telegram": {
+      "enabled": false,
+      "bot_token": "",
+      "chat_id": ""
+    },
+    "discord": {
+      "enabled": false,
+      "webhook_url": ""
+    }
+  },
+  "db_path": "omega.db",
+  "csv_path": "opportunities.csv"
+}
