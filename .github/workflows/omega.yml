@@ -1,0 +1,41 @@
+name: Omega Prime Agent
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 15 minutes
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+      TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run OMEGA-PRIME Agent
+        run: python omega_prime_agent.py
+
+      - name: Commit & Push Results
+        run: |
+          git config user.name "Omega-Prime Bot"
+          git config user.email "bot@example.com"
+          git add opportunities.csv omega.db || true
+          git commit -m "🤖 Update opportunities [skip ci]" || echo "No changes to commit"
+          git push || echo "Push failed (see logs)"
